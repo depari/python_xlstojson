@@ -1,18 +1,22 @@
+#-*- coding:utf-8 -*-
 import xlrd
 from collections import OrderedDict
 import json
 
-excel_path  = '/Users/dwon.seo/Dev/python_prj/ExcelToJson/input_test.xls'
-#excel_path = excel_path[1:]
+
+
+
+excel_path  = 'input_test.xls'
 wb = xlrd.open_workbook(excel_path)
-#sh = wb.sheet_by_index(0)
-
-
 final_data = OrderedDict()
 
 #parse sheet 
 #find sheet name country code
 # data['us']
+
+
+
+
 for sheet in wb.sheets():
     #data = OrderedDict()
     print(sheet.name)
@@ -44,6 +48,6 @@ for sheet in wb.sheets():
 
 j = json.dumps(final_data, ensure_ascii=False, indent='\t')
 
-with open('/Users/dwon.seo/Dev/python_prj/ExcelToJson/data.json', 'w+') as f:
+with open('data.json', 'w+', encoding='UTF-8-sig') as f:
     f.write(j)
     
