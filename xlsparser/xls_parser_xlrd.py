@@ -33,7 +33,7 @@ class XLRDParser:
         self._colNumber = self._curSheet.ncols
         print("self._rowNumber: ", self._rowNumber)
         print("self._colNumber: ", self._colNumber)
-    def getLowNumber(self) -> int:
+    def getRowNumber(self) -> int:
         return self._curSheet.nrows
     def getColNumber(self) -> int:
         return self._curSheet.ncols
