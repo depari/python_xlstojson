@@ -1,2 +1,4 @@
 
 *.pyc
+
+xlsparser/__pycache__/
