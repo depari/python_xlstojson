@@ -8,8 +8,10 @@ from xlsparser.xls_parser import XLSSheet
 
 
 
+dataname = 'test'
 
-excel_path  = 'input_test.xls'
+excel_path  = 'input_'+ dataname + '.xls'
+output_path = 'output_'+ dataname + '.json'
 parser = xls_parser_xlrd_v2.XLRDParser(excel_path) 
 
 #parse sheet 
@@ -52,6 +54,6 @@ out_data = getData()
 
 j = json.dumps(out_data, ensure_ascii=False, indent='\t')
 
-with open('data_03.json', 'w+', encoding='UTF-8-sig') as f:
+with open(output_path, 'w+', encoding='UTF-8-sig') as f:
     f.write(j)
     
