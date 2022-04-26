@@ -31,7 +31,7 @@ def getCountryData(country_code: string) -> OrderedDict:
 
 def getLanguageData(colnum:int) -> OrderedDict:
     _data = OrderedDict()
-    for rownum in range(1, parser.getLowNumber()):            
+    for rownum in range(1, parser.getRowNumber()):            
             item_key = parser.getCelValue(rownum, 0)
             print(item_key) #keyname 
             #data['us']['en']]['title']
